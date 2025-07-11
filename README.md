@@ -1,54 +1,92 @@
-# 🌳 TiwanaConnect – Project Documentation
+# Build Stunning Documentations With React & Docusaurus (Complete Guide)
 
-**TiwanaConnect** is a private, full-stack web application to digitally connect and organize the extended Tiwana family.  
-This platform enables family members to view a dynamic family tree, preserve relationships, and access relevant family data with privacy and care.
+Learn how to create stunning documentation in minutes with React and Docusaurus. Spend more time building your product and less time writing your documentation.
 
----
+![Docusaurus](https://user-images.githubusercontent.com/47107420/267978511-9f934544-0fc4-44e1-84a1-150a4d9539d2.png)
 
-## 🏗️ Project Overview
+## Here’s What You’ll Learn 👨🏻‍💻
 
-| Layer      | Stack/Tool                          |
-|------------|-------------------------------------|
-| Frontend   | Next.js, Tailwind CSS, shadcn/ui    |
-| Tree UI    | React Flow (planned)                |
-| Backend    | NestJS, PostgreSQL, Prisma          |
-| Auth       | Clerk/Auth.js or custom JWT         |
-| Infra      | Docker, Railway, GitHub Actions     |
-| Future DB  | Neo4j (graph DB for relationships)  |
-| AI Tools   | GitHub Copilot, bugbot (TBD)        |
+- What is Docusaurus?
+- Install Docusaurus
+- Creating your own documentation
+- MDX (Markdown + JSX)
+- Import components into Markdown
+- Using tabs, alerts and codeblocks
+- Customizing the sidebar
+- Implementing a table of contents
+- Custom styling
+- Creating custom pages
+- Setting up the blog
+- SEO
+- Deployment
 
----
+## Change Homepage to Use Images Instead
 
-## 🚀 Releases
+Here's an example, you can replace the images inside the array. Edit the located at `/src/components/HomepageFeatures/index.js`.
 
-| Release      | Description                                        | Status       |
-|--------------|----------------------------------------------------|--------------|
-| Release 1    | First full version with login, member tree, roles  | In Progress  |
-| Release 2    | Self-signup, request flow, approvals                | Planned      |
-| Release 3    | Roles expansion, chat, inheritance, Neo4j backend  | Ideation     |
+```jsx
+import React from 'react';
+import clsx from 'clsx';
+import styles from './styles.module.css';
 
-Each release has its own document under the `releases/` folder.
+const FeatureList = [
+  {
+    title: 'Easy to Use',
+    Image: require('@site/static/img/docusaurus-social-card.jpg').default,
+    description: (
+      <>
+        Docusaurus was designed from the ground up to be easily installed and
+        used to get your website up and running quickly.
+      </>
+    ),
+  },
+  {
+    title: 'Focus on What Matters',
+    Image: require('@site/static/img/docusaurus-social-card.jpg').default,
+    description: (
+      <>
+        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+        ahead and move your docs into the <code>docs</code> directory.
+      </>
+    ),
+  },
+  {
+    title: 'Powered by React',
+    Image: require('@site/static/img/docusaurus-social-card.jpg').default,
+    description: (
+      <>
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
+      </>
+    ),
+  },
+];
 
----
+function Feature({ Image, title, description }) {
+  return (
+    <div className={clsx('col col--4')}>
+      <div className="text--center">
+        <img src={Image} className={styles.featureImage} alt={title} />
+      </div>
+      <div className="text--center padding-horiz--md">
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
 
-## 🧱 Documentation Structure
-
-tiwanaconnect-docs/ ├── README.md                   # This overview ├── architecture/               # ERDs, DB design, API map │   ├── erd-v1.png │   ├── db-models.md │   ├── api-map.md │   └── future-graph-model.md ├── releases/                   # Specifications per release │   ├── release-1.md │   ├── release-2.md │   └── ...
-
----
-
-## 🛣️ Roadmap (High-Level)
-
-- [ ] 🔒 Controlled login system (admin creates member logins)
-- [ ] 🧑‍🤝‍🧑 Add & view family members and link relationships
-- [ ] 🌳 Render an interactive family tree (from backend data)
-- [ ] 📩 Admin-driven invites & account activation
-- [ ] 🧠 Setup for future: role-based control, Neo4j graph support
-
----
-
-## 🤝 Maintained By
-
-**Muhammad Arslan**  
-Lead Developer, Architect & Founder of TiwanaConnect  
-> “Building this with love for my entire family 💛”
+export default function HomepageFeatures() {
+  return (
+    <section className={styles.features}>
+      <div className="container">
+        <div className="row">
+          {FeatureList.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+```

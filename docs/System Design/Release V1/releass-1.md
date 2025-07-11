@@ -1,4 +1,4 @@
-# 🚀 TiwanaConnect – Release 1 Specification
+# Specification
 
 **Version:** Release 1  
 **Status:** In Progress  

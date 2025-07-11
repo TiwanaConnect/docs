@@ -11,16 +11,16 @@ This document defines the core database entities and their relationships for Rel
 - Represents a family person.
 - Contains personal info only (not for login).
 
-| Field       | Type         | Description                    |
-|-------------|--------------|--------------------------------|
-| id          | UUID (PK)    | Primary key                    |
-| name        | String       | Full name                      |
-| dob         | Date         | Date of birth                  |
-| gender      | Enum         | `male`, `female`, `other`      |
-| bio         | Text         | Optional short description     |
-| image_url   | String       | Profile image (optional)       |
-| parent_ids  | Array<UUID>  | Parent member(s)               |
-| spouse_ids  | Array<UUID>  | Spouse member(s)               |
+| Field       | Type            | Description                    |
+|-------------|-----------------|--------------------------------|
+| id          | UUID (PK)       | Primary key                    |
+| name        | String          | Full name                      |
+| dob         | Date            | Date of birth                  |
+| gender      | Enum            | `male`, `female`, `other`      |
+| bio         | Text            | Optional short description     |
+| image_url   | String          | Profile image (optional)       |
+| parent_ids  | `Array<UUID>`   | Parent member(s)               |
+| spouse_ids  | `Array<UUID>`   | Spouse member(s)               |
 
 ---
 
