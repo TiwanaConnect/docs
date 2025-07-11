@@ -1,4 +1,4 @@
-# 🛠️ GitHub Setup – TiwanaConnect
+# GitHub Setup
 
 ---
 

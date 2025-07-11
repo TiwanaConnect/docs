@@ -1,4 +1,4 @@
-# 🌳 Family Tree UI – Library Planning (Release 1)
+# Family Tree UI – Library Planning
 
 This document explores options for building the interactive family tree on the frontend.
 

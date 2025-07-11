@@ -1,4 +1,4 @@
-# 🚀 Deployment Plan – TiwanaConnect
+# Deployment Plan
 
 ---
 

@@ -1,4 +1,4 @@
-# 📡 API Map – Release 1
+# API Map
 
 This file outlines all the available REST APIs in Release 1 with access levels and basic purpose.
 

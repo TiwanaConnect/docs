@@ -1,4 +1,4 @@
-# 🗄️ Database Schema Notes – PostgreSQL + Neo4j
+# Database Schema Notes – PostgreSQL + Neo4j
 
 This doc explains how our app uses PostgreSQL as the primary DB, and Neo4j as a secondary sync graph DB.
 

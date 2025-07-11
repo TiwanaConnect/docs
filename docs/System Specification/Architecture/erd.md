@@ -1,4 +1,4 @@
-# 🧩 Entity Relationship Diagram (ERD) – Release 1
+# Entity Relationship Diagram (ERD)
 
 This document defines the core database entities and their relationships for Release 1 of TiwanaConnect.
 
